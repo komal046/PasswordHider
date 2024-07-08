@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Hider</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"/>
+</head>
+<body>
+    <div class="input-box">
+        <input type="password" placeholder="Password" id="password" > 
+        <img src="eye-fill.png" alt="" id="eyeIcon">
+    </div>
+
+    <script>
+        let password = document.getElementById("password");
+        let eyeIcon = document.getElementById("eyeIcon");
+    
+        eyeIcon.onclick = function(){
+            if(password.type == "password" ){
+                password.type = "text";
+                eyeIcon.src= "eye-fill.png"
+
+            }
+            else{
+                password.type ="password"; 
+                eyeIcon.src = "eye-off-fill.png";
+            }
+        }
+    </script>
+    
+</body>
+
+
+</html>
